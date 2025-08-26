@@ -1,0 +1,50 @@
+{
+  "name": "finance-dashboard",
+  "version": "1.0.0",
+  "description": "Real-Time Financial Dashboard with stock and mutual fund tracking",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development node server.js",
+    "build": "npm run build:client",
+    "build:client": "cd client && npm run build",
+    "start": "NODE_ENV=production node server.js",
+    "install:client": "cd client && npm install",
+    "install:all": "npm install && npm run install:client",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "finance",
+    "dashboard",
+    "real-time",
+    "stocks",
+    "mutual-funds"
+  ],
+  "author": "Anil Bhimwal",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "axios": "^1.6.2",
+    "socket.io": "^4.7.4",
+    "node-cron": "^3.0.3",
+    "compression": "^1.7.4",
+    "@clerk/clerk-sdk-node": "^4.13.19",
+    "redis": "^4.6.10"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.1",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
